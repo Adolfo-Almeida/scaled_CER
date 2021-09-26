@@ -23,7 +23,7 @@ URM_validation = sparse.load_npz(validation_file_name)
 URM_warm_test = sparse.load_npz(warm_test_file_name)
 URM_cold_test = sparse.load_npz(cold_test_file_name)
 
-with open('data/item_indices.pkl', 'rb') as f:
+with open('data/URM/item_indices.pkl', 'rb') as f:
     item_indices = pickle.load(f)
     
 evaluator_validation = EvaluatorHoldout(URM_validation, cutoff_list = cutoff_list_validation, ignore_items = item_indices['te.om'])
